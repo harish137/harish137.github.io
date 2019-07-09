@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include head %>
+</head>
+
+<body>
+  <% include menu %>
+  <div class="container-fluid bg-3">
+    <% include partials/aboutme %>
+    <% include partials/myskills %>
+    <% include partials/education %>
+    <% include partials/employment %>
+    
+
+  </div>
+  <% include partials/workdetails %>
+  <% include partials/contactme %>
+  <% include script %>
+  <script>
+    new Accordion(['.accordion-education', '.accordion-employment'], {
+      duration: 400,
+      showItem: true,
+      itemNumber: 0
+    }
+    );
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/grid.js"></script>
+  <script>
+    $(function () {
+      Grid.init();
+    });
+    $("a[href^='#']").click(function (e) {
+      e.preventDefault();
+      var position = $($(this).attr("href")).offset().top;
+      var adjustments = "";
+      if ($('.navbar').hasClass('sticky-navbar')) {
+        adjustments = position - "108" ;
+      }
+      else {
+        adjustments = position - "290" ;
+      }
+      // var objDiv = document.getElementById("employment-content");
+      // objDiv.scrollTop = objDiv.scrollHeight;
+      $("body, html").animate({
+        scrollTop: adjustments
+      }, 800);
+    });
+  </script>
+</body>
+
+</html>

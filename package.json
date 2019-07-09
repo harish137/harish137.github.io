@@ -1,0 +1,31 @@
+{
+  "name": "harish137.github.io",
+  "version": "1.0.0",
+  "description": "my CV",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harish137/harish137.github.io.git"
+  },
+  "author": "harish bompally",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harish137/harish137.github.io/issues"
+  },
+  "homepage": "https://github.com/harish137/harish137.github.io#readme",
+  "dependencies": {
+    "accordion-js": "^2.7.2",
+    "bootstrap": "^4.3.1",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
+    "nanogallery2": "^2.4.2",
+    "nodemon": "^1.19.1",
+    "path": "^0.12.7",
+    "scroll-to-element": "^2.0.3",
+    "serve-favicon": "^2.5.0"
+  }
+}
